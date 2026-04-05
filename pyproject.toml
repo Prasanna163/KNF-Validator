@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knf-atlas-validator"
+version = "0.1.0"
+description = "Deterministic local validator for KNF Atlas submission bundles."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+knf-validate = "validator.cli:main"
+
+[tool.setuptools]
+packages = ["validator"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
